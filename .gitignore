@@ -1,0 +1,8 @@
+notes.txt
+debian/lua-visnet/
+debian/lua-visnet.substvars
+debian/lua-visnet.debhelper.log
+debian/debhelper-build-stamp
+debian/files
+debian/.debhelper
+

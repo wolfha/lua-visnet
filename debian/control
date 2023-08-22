@@ -1,0 +1,13 @@
+Source: lua-visnet
+Section: utils
+Priority: optional
+Maintainer: augmentedlogic development <dev@augmentedlogic.com>
+Homepage: https://github.com/wolfha/lua-visnet.git
+
+Package: lua-visnet
+Architecture: all
+Section: utils
+Priority: optional
+Depends: lua, lua-json
+Description: lua library to create visjs network compatible json
+ a convenient library to create json to render visjs network graphs

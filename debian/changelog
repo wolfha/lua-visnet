@@ -1,0 +1,5 @@
+lua-visnet (0.1.2-1) unstable; urgency=low
+  * initial debian package
+
+ -- augmentedlogic development <dev@augmentedlogic.com>  Mon, 21 Aug 2023 13:10:30 +0000
+

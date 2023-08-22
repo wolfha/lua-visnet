@@ -1,0 +1,6 @@
+src/visnet.lua  usr/share/lua/5.1
+src/visnet.lua  usr/share/lua/5.2
+src/visnet.lua  usr/share/lua/5.3
+src/visnet/*.lua  usr/share/lua/5.1/visnet
+src/visnet/*.lua  usr/share/lua/5.2/visnet
+src/visnet/*.lua  usr/share/lua/5.3/visnet
