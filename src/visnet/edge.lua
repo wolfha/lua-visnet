@@ -27,7 +27,7 @@ local _M = {}
 local mt = { __index = { } }
     
     function _M.new(from, to)
-        local object = setmetatable({ edge_t = { from = from, to = to } },  mt)
+        local object = setmetatable({ edge_t = { from = from.node_t.id, to = to.node_t.id } },  mt)
     return object
     end
 

@@ -1,4 +1,4 @@
-package.path = package.path .. ";../src/?.lua"
+package.path = "../src/?.lua;"..package.path
 
 
 local visnet = require("visnet")
@@ -10,12 +10,12 @@ local graph = visnet.new()
       graph:setOption("nodes.borderWidth", 0)
       graph:setOption("nodes.font.color", "#fff")
 
-local n1 = visnet.node.new(1, "testnode")
+local n1 = visnet.node.new("n1", "testnode")
       n1:setGroup("group1")
       n1:setTitle("best node ever")
       n1:setValue(40)
 
-local n2 = visnet.node.new("mc", "another node")
+local n2 = visnet.node.new("n2", "another node")
       n2:setGroup("group1")
       n2:setTitle("best node ever")
       n2:setValue(40)
@@ -49,23 +49,23 @@ local n7 = visnet.node.new("n7", "node n7")
       graph:addNode(n7)
 
 
-local e1 = visnet.edge.new(1, "mc")
+local e1 = visnet.edge.new(n1, n2)
       e1:setArrows("from");
 
-local e2 = visnet.edge.new(1, "n3")
+local e2 = visnet.edge.new(n1, n3)
       e2:setArrows("from;to");
 
-local e3 = visnet.edge.new("n3", "n4")
-local e4 = visnet.edge.new("n3", "n5")
-local e5 = visnet.edge.new("n3", "n6")
-local e6 = visnet.edge.new("n3", "n7")
+local e3 = visnet.edge.new(n3, n4)
+local e4 = visnet.edge.new(n3, n5)
+local e5 = visnet.edge.new(n3, n6)
+local e6 = visnet.edge.new(n3, n7)
 
-      graph:addEdge(e1)
-      graph:addEdge(e2)
-      graph:addEdge(e3)
-      graph:addEdge(e4)
-      graph:addEdge(e5)
-      graph:addEdge(e6)
+        graph:addEdge(e1)
+        graph:addEdge(e2)
+        graph:addEdge(e3)
+        graph:addEdge(e4)
+        graph:addEdge(e5)
+        graph:addEdge(e6)
 
 
       -- you may dump the data to screen for debugging purposes
