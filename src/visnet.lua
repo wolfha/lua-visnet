@@ -52,6 +52,12 @@ local optset = require('visnet.optset')
         table.insert(self.edges, e.edge_t)
     end
 
+    function mt.__index:addEdgeBulk(et)
+        for i, e in ipairs(et) do
+          table.insert(self.edges, e.edge_t)
+        end
+    end
+
     function mt.__index:dump()
         dumpdata(self.options)
         dumpdata(self.nodes)
@@ -100,6 +106,13 @@ local optset = require('visnet.optset')
     function mt.__index:addNode(n)
         table.insert(self.nodes, n.node_t)
     end
+
+    function mt.__index:addNodeBulk(nt)
+        for i, n in ipairs(nt) do
+          table.insert(self.nodes, n.node_t)
+        end
+    end
+
 
     function mt.__index:nodesAsJson()
         return json.encode(self.nodes)

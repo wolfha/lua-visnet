@@ -41,13 +41,8 @@ local n7 = visnet.node.new("n7", "node n7")
 
 
       graph:addNode(n1)
-      graph:addNode(n2)
-      graph:addNode(n3)
-      graph:addNode(n4)
-      graph:addNode(n5)
-      graph:addNode(n6)
-      graph:addNode(n7)
 
+      graph:addNodeBulk( { n2, n3, n4, n5, n6, n7 })
 
 local e1 = visnet.edge.new(n1, n2)
       e1:setArrows("from");
@@ -61,15 +56,11 @@ local e5 = visnet.edge.new(n3, n6)
 local e6 = visnet.edge.new(n3, n7)
 
         graph:addEdge(e1)
-        graph:addEdge(e2)
-        graph:addEdge(e3)
-        graph:addEdge(e4)
-        graph:addEdge(e5)
-        graph:addEdge(e6)
 
+        graph:addEdgeBulk( { e2, e3, e3, e4, e5 } )
 
       -- you may dump the data to screen for debugging purposes
-      --graph:dump()
+      -- graph:dump()
 
       -- get everything as a json string
       local json_string = graph:asJson()

@@ -1,3 +1,8 @@
+lua-visnet (0.3-1) unstable; urgency=low
+  * bulk add for nodes and edges
+
+ -- augmentedlogic development <dev@augmentedlogic.com>  Sun, 27 Aug 2023 14:20:00 +0000
+
 lua-visnet (0.2-1) unstable; urgency=low
   * initial debian package
 
